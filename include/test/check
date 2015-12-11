@@ -1,0 +1,65 @@
+#pragma once
+
+#include <test/fail>
+
+namespace test
+{
+    template <typename value_type>
+    class check
+    {
+    public:
+        check(const value_type& value, const char* file, int line)
+            : m_value(value), m_file(file), m_line(line)
+        {
+        }
+
+        void ensure(bool statement, const char* message)
+        {
+            if (!statement)
+                throw fail(message, m_file, m_line);
+        }
+
+        template <typename another_type>
+        bool operator == (const another_type& another)
+        {
+            return ensure(m_value == another, "check(value) == expected");
+        }
+
+        template <typename another_type>
+        bool operator != (const another_type& another)
+        {
+            return ensure(m_value != another, "check(value) != unexpected");
+        }
+
+        template <typename another_type>
+        bool operator < (const another_type& another)
+        {
+            return ensure(m_value < another, "check(value) < limit");
+        }
+
+        template <typename another_type>
+        bool operator > (const another_type& another)
+        {
+            return ensure(m_value < another, "check(value) > limit");
+        }
+
+        template <typename another_type>
+        bool operator <= (const another_type& another)
+        {
+            return ensure(m_value < another, "check(value) <= limit");
+        }
+
+        template <typename another_type>
+        bool operator >= (const another_type& another)
+        {
+            return ensure(m_value < another, "check(value) >= limit");
+        }
+
+    private:
+        const value_type& m_value;
+        const char* m_file;
+        int m_line;
+    };
+}
+
+#define c7check(value) test::check(value, __FILE__, __LINE__)

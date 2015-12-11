@@ -1,0 +1,17 @@
+#pragma once
+
+#include <c7api>
+
+namespace test
+{
+    class suite;
+
+    class c7api run
+    {
+    public:
+        run();
+        ~run();
+
+        static void add(suite* elem);
+    };
+}

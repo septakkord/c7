@@ -1,0 +1,26 @@
+#pragma once
+
+#include <exception>
+#include <memory>
+#include <c7api>
+
+namespace test
+{
+    class c7api fail : public std::exception
+    {
+    public:
+        fail(const char* message, const char* file, int line);
+
+        virtual const char* what() const override;
+
+        virtual const char* get_message() const;
+        virtual const char* get_file() const;
+        virtual int get_line() const;
+
+    protected:
+        class info;
+
+    private:
+        std::shared_ptr<info> m_info;
+    };
+}

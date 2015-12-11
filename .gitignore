@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+Debug
+Release
+*.sdf
+*.suo
+*.opensdf
+*.user
