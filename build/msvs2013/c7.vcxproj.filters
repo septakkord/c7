@@ -81,11 +81,11 @@
     <None Include="..\..\include\c7api">
       <Filter>include</Filter>
     </None>
-    <None Include="..\..\sources\test\fail\info">
-      <Filter>sources\test\fail</Filter>
-    </None>
     <None Include="..\..\include\test\run">
       <Filter>include\test</Filter>
+    </None>
+    <None Include="..\..\sources\test\fail\fail_info">
+      <Filter>sources\test\fail</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -113,14 +113,14 @@
     <ClCompile Include="..\..\sources\test\suite.cpp">
       <Filter>sources\test</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\sources\test\fail\info.cpp">
-      <Filter>sources\test\fail</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\sources\test\fail.cpp">
       <Filter>sources\test</Filter>
     </ClCompile>
     <ClCompile Include="..\..\sources\test\run.cpp">
       <Filter>sources\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\test\fail\fail_info.cpp">
+      <Filter>sources\test\fail</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

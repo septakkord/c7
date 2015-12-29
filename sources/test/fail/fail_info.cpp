@@ -1,4 +1,4 @@
-#include "info"
+#include "fail_info"
 #include <sstream>
 
 namespace test

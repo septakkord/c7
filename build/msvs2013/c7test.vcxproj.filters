@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\sources\test\main.cpp" />
+    <ClCompile Include="..\..\sources\test\main.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\test\run\run_test.cpp">
+      <Filter>test\run</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{2b71d80b-4832-4ee9-9594-f3b4e78112f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\run">
+      <UniqueIdentifier>{3c57ba66-7371-4005-8044-918d97a6882c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

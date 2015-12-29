@@ -1,4 +1,4 @@
-#include "fail/info"
+#include "fail/fail_info"
 
 namespace test
 {
