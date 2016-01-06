@@ -1,6 +1,7 @@
 #pragma once
 
 #include <c7api>
+#include <iosfwd>
 
 namespace test
 {
@@ -13,5 +14,7 @@ namespace test
         ~run();
 
         static void add(suite* elem);
+
+        static void set_output(std::ostream& output);
     };
 }

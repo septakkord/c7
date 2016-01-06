@@ -10,5 +10,6 @@ namespace test
         suite();
 
         virtual void run() = 0;
+        virtual const char* name() const = 0;
     };
 }

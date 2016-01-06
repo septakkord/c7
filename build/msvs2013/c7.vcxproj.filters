@@ -72,9 +72,6 @@
     <None Include="..\..\include\test\check">
       <Filter>include\test</Filter>
     </None>
-    <None Include="..\..\include\test\suite">
-      <Filter>include\test</Filter>
-    </None>
     <None Include="..\..\include\test\fail">
       <Filter>include\test</Filter>
     </None>
@@ -86,6 +83,9 @@
     </None>
     <None Include="..\..\sources\test\fail\fail_info">
       <Filter>sources\test\fail</Filter>
+    </None>
+    <None Include="..\..\include\test\suite">
+      <Filter>include\test</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

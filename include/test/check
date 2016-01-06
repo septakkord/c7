@@ -5,10 +5,10 @@
 namespace test
 {
     template <typename value_type>
-    class checked
+    class checker
     {
     public:
-        checked(const value_type& value, const char* file, int line)
+        checker(const value_type& value, const char* file, int line)
             : m_value(value), m_file(file), m_line(line)
         {
         }
@@ -62,9 +62,9 @@ namespace test
     };
 
     template <typename value_type>
-    checked<value_type> check(const value_type& value, const char* file, int line)
+    checker<value_type> check(const value_type& value, const char* file, int line)
     {
-        return checked<value_type>(value, file, line);
+        return checker<value_type>(value, file, line);
     }
 }
 

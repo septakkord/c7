@@ -16,5 +16,11 @@ namespace test
             c7check(-5) <= -5.0f;
             c7check(1.0f) >= 0.9999999;
         }
+
+        virtual const char* name() const override
+        {
+            return "Test of running process.";
+        }
+
     } g_run_test;
 }
