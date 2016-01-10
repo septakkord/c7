@@ -23,17 +23,17 @@ namespace test
                 {
                     current->run();
                 }
-                *g_output << current->name() << " OK!" << std::endl;
+                *g_output << current->name() << " - OK!" << std::endl;
             }
             catch (fail& failure)
             {
                 ++g_fail_count;
-                *g_output << current->name() << " FAIL!\n > " << failure.what() << std::endl; // TODO: traceback
+                *g_output << current->name() << " - FAIL!\n > " << failure.what() << std::endl; // TODO: traceback
             }
             catch (std::exception& error)
             {
                 ++g_error_count;
-                *g_output << current->name() << " ERROR!\n > " << error.what() << std::endl;
+                *g_output << current->name() << " - ERROR!\n > " << error.what() << std::endl;
             }
             catch (...)
             {
@@ -44,11 +44,13 @@ namespace test
 
         void output_result()
         {
-            const char* result = g_fail_count || g_error_count ? "FAILURE" : "SUCCESS";
             *g_output << "\n > Errors:     " << g_error_count
                       << "\n > Fails:      " << g_fail_count
                       << "\n > Total:      " << g_test_count
-                      << "\n > Result:  " << result << std::endl;
+                      << "\n > Result:  " 
+                      << (g_fail_count || g_error_count ? "FAILURE"
+                                                        : "SUCCESS")
+                      << std::endl;
         }
     }
 
