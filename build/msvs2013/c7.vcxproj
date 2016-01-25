@@ -164,10 +164,15 @@
     <None Include="..\..\include\test\run" />
     <None Include="..\..\include\test\suite" />
     <None Include="..\..\include\type\cast" />
+    <None Include="..\..\include\type\exception" />
+    <None Include="..\..\include\type\lazycopy" />
     <None Include="..\..\include\type\object" />
+    <None Include="..\..\include\type\traceback" />
     <None Include="..\..\include\unicode\sign" />
     <None Include="..\..\include\unicode\text" />
     <None Include="..\..\sources\test\fail\fail_info" />
+    <None Include="..\..\sources\type\object\object_holder" />
+    <None Include="..\..\sources\type\object\scalar_holder" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\sources\cloud\cache.cpp" />

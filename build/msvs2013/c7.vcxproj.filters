@@ -46,6 +46,9 @@
     <Filter Include="sources\test\fail">
       <UniqueIdentifier>{bc9c0cd6-3705-4b79-8d81-2c0d668aff14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\type\object">
+      <UniqueIdentifier>{3413456b-8dc8-4685-a6c2-54b924596976}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\include\cloud\cache">
@@ -86,6 +89,21 @@
     </None>
     <None Include="..\..\include\test\suite">
       <Filter>include\test</Filter>
+    </None>
+    <None Include="..\..\include\type\exception">
+      <Filter>include\type</Filter>
+    </None>
+    <None Include="..\..\include\type\traceback">
+      <Filter>include\type</Filter>
+    </None>
+    <None Include="..\..\include\type\lazycopy">
+      <Filter>include\type</Filter>
+    </None>
+    <None Include="..\..\sources\type\object\object_holder">
+      <Filter>sources\type\object</Filter>
+    </None>
+    <None Include="..\..\sources\type\object\scalar_holder">
+      <Filter>sources\type\object</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

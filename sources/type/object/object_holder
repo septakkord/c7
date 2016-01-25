@@ -1,0 +1,12 @@
+#pragma once
+
+#include <type/object>
+
+namespace type
+{
+    class object::holder
+    {
+    public:
+        virtual holder* clone() const = 0;
+    };
+}

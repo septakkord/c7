@@ -1,0 +1,41 @@
+#pragma once
+
+#include <memory>
+#include <type/exception>
+
+namespace type
+{
+    template <typename data_type>
+    class lazycopy
+    {
+    public:
+        lazycopy(data_type* new_data = nullptr);
+
+        data_type* operator -> ();
+        const data_type* operator -> () const;
+        
+        data_type& operator * ();
+        const data_type& operator * () const;
+
+    private:
+        std::shared_ptr<data_type> m_data;
+    };
+
+    template <typename data_type>
+    lazycopy<data_type>::lazycopy(data_type* new_data /*= nullptr*/)
+        : m_data(new_data)
+    {
+    }
+
+    template <typename data_type>
+    data_type* lazycopy<data_type>::operator -> ()
+    {
+        return m_data.get();
+    }
+
+    template <typename data_type>
+    const data_type* lazycopy<data_type>::operator -> () const
+    {
+        return m_data.get();
+    }
+}

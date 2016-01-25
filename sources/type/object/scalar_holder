@@ -1,0 +1,39 @@
+#pragma once
+
+#include "object_holder"
+
+namespace type
+{
+    template <typename value_type>
+    class scalar_holder : public object::holder
+    {
+    public:
+        scalar_holder(const value_type& value)
+            : m_value(value)
+        {
+        }
+
+        const value_type& get_value() const
+        {
+            return m_value;
+        }
+
+        value_type& get_value()
+        {
+            return m_value;
+        }
+
+        void set_value(const value_type& value)
+        {
+            m_value = value;
+        }
+
+        virtual object::holder* clone() const override
+        {
+            return new scalar_holder(*this);
+        }
+
+    private:
+        value_type m_value;
+    };
+}

@@ -8,6 +8,11 @@ namespace test
     class run_test : public suite
     {
     public:
+        virtual const char* name() const override
+        {
+            return "Test of test run";
+        }
+
         virtual void run() override
         {
             c7check(5) > -5;
@@ -16,11 +21,6 @@ namespace test
             c7check(-5) <= -5.0f;
             c7check(1.0f) >= 0.9999999;
             c7check("a") < "b";
-        }
-
-        virtual const char* name() const override
-        {
-            return "Test of test run";
         }
 
     } g_run_test;

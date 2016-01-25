@@ -1,0 +1,29 @@
+#pragma once
+
+namespace type
+{
+    template <typename result_type, typename value_type, typename meta_type = void>
+    struct converter
+    {
+    public:
+        static bool try_convert(result_type& result, const value_type& value)
+        {
+            static_assert(false, "Type conversion is not correct.");
+        }
+    };
+
+    template <typename result_type, typename value_type>
+    bool try_cast(result_type& result, const value_type& value)
+    {
+        return converter<result_type, value_type>::try_convert(result, value);
+    }
+
+    template <typename result_type, typename value_type>
+    result_type cast(const value_type& value)
+    {
+        result_type result;
+        if (!try_cast(result, value))
+            throw std::bad_cast
+        return result;
+    }
+}
