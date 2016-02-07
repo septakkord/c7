@@ -1,16 +1,19 @@
 #pragma once
 
-#include <type/object>
+#include <c7/type/object>
 
-namespace type
+namespace c7
 {
-    class object::holder
+    namespace type
     {
-    public:
-        virtual ~holder()
+        class object::holder
         {
-        }
+        public:
+            virtual ~holder()
+            {
+            }
 
-        virtual holder* clone(void* buffer) const = 0;
-    };
+            virtual holder* clone(void* buffer) const = 0;
+        };
+    }
 }

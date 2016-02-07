@@ -1,5 +1,8 @@
-#include "object_holder"
+#include <internal/type/object/object_holder>
 
-namespace type
+namespace c7
 {
+    namespace type
+    {
+    }
 }

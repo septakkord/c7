@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{175835aa-757b-44fe-932e-7f72c4f4993c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\cloud">
+      <UniqueIdentifier>{2c8c6f2e-0b01-44b1-9249-5bf4cccd2ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\data">
+      <UniqueIdentifier>{c7f157d0-1e6e-4ab3-90e4-093bbf39c825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\math">
+      <UniqueIdentifier>{99bc1c84-ea91-41d5-b180-95f09097071b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\unicode">
+      <UniqueIdentifier>{23e33c95-df2b-49c0-9757-2c18f6e78c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\type">
+      <UniqueIdentifier>{2862c172-1a8b-4b24-be57-d0921aebadc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\type\object">
+      <UniqueIdentifier>{3413456b-8dc8-4685-a6c2-54b924596976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\test">
+      <UniqueIdentifier>{97db5038-e168-42f4-83f6-035460a62a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\test\fail">
+      <UniqueIdentifier>{bc9c0cd6-3705-4b79-8d81-2c0d668aff14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7">
+      <UniqueIdentifier>{de52f676-a710-4d75-bfd0-a8a449fb0b1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\cloud">
+      <UniqueIdentifier>{79c1c99d-7cd5-4efe-a87e-d8e3977b7e60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\data">
+      <UniqueIdentifier>{b6f20176-0219-4c2b-a240-125fd19a8b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\math">
+      <UniqueIdentifier>{5ad9f167-8471-4094-87e2-9c1c2783ccc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\test">
+      <UniqueIdentifier>{282d6c13-cc69-46f2-ba4c-28f967895b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\type">
+      <UniqueIdentifier>{390999e2-27c9-4787-9b08-c839c33900b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c7\unicode">
+      <UniqueIdentifier>{ce4bec53-6620-4922-a14a-51b32b49029d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\c7\cloud\cache">
+      <Filter>c7\cloud</Filter>
+    </None>
+    <None Include="..\..\..\c7\data\query">
+      <Filter>c7\data</Filter>
+    </None>
+    <None Include="..\..\..\c7\math\decimal">
+      <Filter>c7\math</Filter>
+    </None>
+    <None Include="..\..\..\c7\test\check">
+      <Filter>c7\test</Filter>
+    </None>
+    <None Include="..\..\..\c7\test\fail">
+      <Filter>c7\test</Filter>
+    </None>
+    <None Include="..\..\..\c7\test\run">
+      <Filter>c7\test</Filter>
+    </None>
+    <None Include="..\..\..\c7\test\suite">
+      <Filter>c7\test</Filter>
+    </None>
+    <None Include="..\..\..\c7\type\cast">
+      <Filter>c7\type</Filter>
+    </None>
+    <None Include="..\..\..\c7\type\exception">
+      <Filter>c7\type</Filter>
+    </None>
+    <None Include="..\..\..\c7\type\lazycopy">
+      <Filter>c7\type</Filter>
+    </None>
+    <None Include="..\..\..\c7\type\object">
+      <Filter>c7\type</Filter>
+    </None>
+    <None Include="..\..\..\c7\type\traceback">
+      <Filter>c7\type</Filter>
+    </None>
+    <None Include="..\..\..\c7\unicode\sign">
+      <Filter>c7\unicode</Filter>
+    </None>
+    <None Include="..\..\..\c7\unicode\text">
+      <Filter>c7\unicode</Filter>
+    </None>
+    <None Include="..\..\..\c7\api">
+      <Filter>c7</Filter>
+    </None>
+    <None Include="..\..\..\internal\test\fail\fail_info">
+      <Filter>internal\test\fail</Filter>
+    </None>
+    <None Include="..\..\..\internal\type\object\object_holder">
+      <Filter>internal\type\object</Filter>
+    </None>
+    <None Include="..\..\..\internal\type\object\scalar_holder">
+      <Filter>internal\type\object</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\internal\cloud\cache.cpp">
+      <Filter>internal\cloud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\data\query.cpp">
+      <Filter>internal\data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\math\decimal.cpp">
+      <Filter>internal\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\test\fail.cpp">
+      <Filter>internal\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\test\run.cpp">
+      <Filter>internal\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\test\suite.cpp">
+      <Filter>internal\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\test\fail\fail_info.cpp">
+      <Filter>internal\test\fail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\unicode\sign.cpp">
+      <Filter>internal\unicode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\unicode\text.cpp">
+      <Filter>internal\unicode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\type\cast.cpp">
+      <Filter>internal\type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\type\object.cpp">
+      <Filter>internal\type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\internal\type\object\object_holder.cpp">
+      <Filter>internal\type\object</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

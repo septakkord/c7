@@ -1,4 +1,4 @@
-#include <test/run>
+#include <c7/test/run>
 #include <iostream>
 #include <stdlib.h>
 #include <conio.h>
@@ -12,6 +12,6 @@ void anykey()
 int main()
 {
     atexit(anykey);
-    test::run();
+    c7::test::run();
     return 0;
 }

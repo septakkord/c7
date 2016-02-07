@@ -1,8 +1,8 @@
 #pragma once
 
+#include <c7/api>
 #include <exception>
 #include <memory>
-#include <c7/api>
 
 namespace c7
 {

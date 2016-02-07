@@ -1,13 +1,13 @@
 #pragma once
 
-#include <exception>
 #include <c7/type/object>
+#include <exception>
 
 namespace c7
 {
     namespace type
     {
-        class exception : public std::exception, public object
+        class c7api exception : public std::exception, public object
         {
         public:
             const char* what() const override;
@@ -15,8 +15,6 @@ namespace c7
         protected:
             class holder;
             class instance;
-
-        private:
         };
     }
 }

@@ -1,40 +1,43 @@
 #pragma once
 
-#include "object_holder"
+#include <internal/type/object/object_holder>
 #include <new>
 
-namespace type
+namespace c7
 {
-    template <typename value_type>
-    class scalar_holder : public object::holder
+    namespace type
     {
-    public:
-        scalar_holder(const value_type& value)
-            : m_value(value)
+        template <typename value_type>
+        class scalar_holder : public object::holder
         {
-        }
+        public:
+            scalar_holder(const value_type& value)
+                : m_value(value)
+            {
+            }
 
-        const value_type& get_value() const
-        {
-            return m_value;
-        }
+            const value_type& get_value() const
+            {
+                return m_value;
+            }
 
-        value_type& get_value()
-        {
-            return m_value;
-        }
+            value_type& get_value()
+            {
+                return m_value;
+            }
 
-        void set_value(const value_type& value)
-        {
-            m_value = value;
-        }
+            void set_value(const value_type& value)
+            {
+                m_value = value;
+            }
 
-        virtual object::holder* clone(void* buffer) const override
-        {
-            return new(buffer) scalar_holder(*this);
-        }
+            virtual object::holder* clone(void* buffer) const override
+            {
+                return new(buffer)scalar_holder(*this);
+            }
 
-    private:
-        value_type m_value;
-    };
+        private:
+            value_type m_value;
+        };
+    }
 }

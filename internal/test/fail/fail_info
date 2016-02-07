@@ -1,24 +1,27 @@
 #pragma once
 
-#include <test/fail>
+#include <c7/test/fail>
 #include <string>
 
-namespace test
+namespace c7
 {
-    class fail::info
+    namespace test
     {
-    public:
-        info(const char* message, const char* file, int line);
+        class fail::info
+        {
+        public:
+            info(const char* message, const char* file, int line);
 
-        const std::string& get_output() const;
-        const std::string& get_message() const;
-        const std::string& get_file() const;
-        int get_line() const;
+            const std::string& get_output() const;
+            const std::string& get_message() const;
+            const std::string& get_file() const;
+            int get_line() const;
 
-    private:
-        std::string m_output;
-        std::string m_message;
-        std::string m_file;
-        int m_line;
-    };
+        private:
+            std::string m_output;
+            std::string m_message;
+            std::string m_file;
+            int m_line;
+        };
+    }
 }

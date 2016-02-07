@@ -1,10 +1,13 @@
-#include <test/suite>
-#include <test/run>
+#include <c7/test/suite>
+#include <c7/test/run>
 
-namespace test
+namespace c7
 {
-    suite::suite()
+    namespace test
     {
-        run::add(this);
+        suite::suite()
+        {
+            run::add(this);
+        }
     }
 }

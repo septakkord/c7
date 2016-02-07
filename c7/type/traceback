@@ -1,7 +1,7 @@
 #pragma once
 
-#include <memory>
 #include <c7/type/object>
+#include <memory>
 
 namespace c7
 {

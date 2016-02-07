@@ -1,8 +1,8 @@
 #pragma once
 
+#include <c7/api>
 #include <cstdint>
 #include <cstddef>
-#include <c7/api>
 
 #ifndef c7valuelimit
 #define c7valuelimit 64
@@ -35,7 +35,6 @@ namespace c7
             template <typename result_type>
             operator result_type () const;
 
-        protected:
             class holder;
 
         private:
