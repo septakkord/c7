@@ -1,0 +1,22 @@
+#pragma once
+
+#include <exception>
+#include <c7/type/object>
+
+namespace c7
+{
+    namespace type
+    {
+        class exception : public std::exception, public object
+        {
+        public:
+            const char* what() const override;
+
+        protected:
+            class holder;
+            class instance;
+
+        private:
+        };
+    }
+}

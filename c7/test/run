@@ -1,0 +1,23 @@
+#pragma once
+
+#include <c7/api>
+#include <iosfwd>
+
+namespace c7
+{
+    namespace test
+    {
+        class suite;
+
+        class c7api run
+        {
+        public:
+            run();
+            ~run();
+
+            static void add(suite* elem);
+
+            static void set_output(std::ostream& output);
+        };
+    }
+}

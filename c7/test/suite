@@ -1,0 +1,18 @@
+#pragma once
+
+#include <c7/api>
+
+namespace c7
+{
+    namespace test
+    {
+        class c7api suite
+        {
+        public:
+            suite();
+
+            virtual void run() = 0;
+            virtual const char* name() const = 0;
+        };
+    }
+}

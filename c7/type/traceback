@@ -1,0 +1,33 @@
+#pragma once
+
+#include <memory>
+#include <c7/type/object>
+
+namespace c7
+{
+    namespace type
+    {
+        class c7api traceback : public object
+        {
+        public:
+            class entry;
+            class path;
+
+            entry& operator [] (int offset);
+
+            const entry& operator [] (int offset) const;
+
+        private:
+            std::shared_ptr<path> m_path;
+        };
+
+        class c7api traceback::entry : public object
+        {
+        public:
+
+        private:
+            const char* m_file;
+            int line;
+        };
+    }
+}

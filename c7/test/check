@@ -1,0 +1,105 @@
+#pragma once
+
+#include <c7/test/fail>
+#include <string>
+
+namespace c7
+{
+    namespace test
+    {
+        template <typename value_type>
+        class checker
+        {
+        public:
+            checker(const value_type& value, const char* file, int line)
+                : m_value(value), m_file(file), m_line(line)
+            {
+            }
+
+            void ensure(bool statement, const char* message)
+            {
+                if (!statement)
+                    throw fail(message, m_file, m_line);
+            }
+
+            template <typename another_type>
+            void operator == (const another_type& another)
+            {
+                ensure(m_value == another, "check(value) == expected");
+            }
+
+            template <typename another_type>
+            void operator != (const another_type& another)
+            {
+                ensure(m_value != another, "check(value) != unexpected");
+            }
+
+            template <typename another_type>
+            void operator < (const another_type& another)
+            {
+                ensure(m_value < another, "check(value) < limit");
+            }
+
+            template <typename another_type>
+            void operator >(const another_type& another)
+            {
+                ensure(m_value > another, "check(value) > limit");
+            }
+
+            template <typename another_type>
+            void operator <= (const another_type& another)
+            {
+                ensure(m_value <= another, "check(value) <= limit");
+            }
+
+            template <typename another_type>
+            void operator >= (const another_type& another)
+            {
+                ensure(m_value >= another, "check(value) >= limit");
+            }
+
+            void operator == (const char* another)
+            {
+                operator == (std::string(another));
+            }
+
+            void operator != (const char* another)
+            {
+                operator != (std::string(another));
+            }
+
+            void operator > (const char* another)
+            {
+                operator > (std::string(another));
+            }
+
+            void operator < (const char* another)
+            {
+                operator < (std::string(another));
+            }
+
+            void operator >= (const char* another)
+            {
+                operator >= (std::string(another));
+            }
+
+            void operator <= (const char* another)
+            {
+                operator <= (std::string(another));
+            }
+
+        private:
+            const value_type& m_value;
+            const char* m_file;
+            int m_line;
+        };
+
+        template <typename value_type>
+        checker<value_type> check(const value_type& value, const char* file, int line)
+        {
+            return checker<value_type>(value, file, line);
+        }
+    }
+}
+
+#define c7check(value) test::check(value, __FILE__, __LINE__)
