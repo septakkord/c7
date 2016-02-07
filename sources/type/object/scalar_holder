@@ -1,6 +1,7 @@
 #pragma once
 
 #include "object_holder"
+#include <new>
 
 namespace type
 {
@@ -28,9 +29,9 @@ namespace type
             m_value = value;
         }
 
-        virtual object::holder* clone() const override
+        virtual object::holder* clone(void* buffer) const override
         {
-            return new scalar_holder(*this);
+            return new(buffer) scalar_holder(*this);
         }
 
     private:

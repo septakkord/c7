@@ -7,6 +7,10 @@ namespace type
     class object::holder
     {
     public:
-        virtual holder* clone() const = 0;
+        virtual ~holder()
+        {
+        }
+
+        virtual holder* clone(void* buffer) const = 0;
     };
 }
