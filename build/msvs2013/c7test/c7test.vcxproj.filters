@@ -12,7 +12,7 @@
     <ClCompile Include="..\..\..\sources\test\run\run_test.cpp">
       <Filter>test\run</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sources\test\run.cpp">
+    <ClCompile Include="..\..\..\sources\test\main.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

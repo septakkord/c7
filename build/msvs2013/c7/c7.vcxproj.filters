@@ -122,9 +122,6 @@
     <ClCompile Include="..\..\..\sources\test\fail.cpp">
       <Filter>sources\test</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sources\test\main.cpp">
-      <Filter>sources\test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\sources\test\suite.cpp">
       <Filter>sources\test</Filter>
     </ClCompile>
@@ -145,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\sources\unicode\text.cpp">
       <Filter>sources\unicode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\test\run.cpp">
+      <Filter>sources\test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

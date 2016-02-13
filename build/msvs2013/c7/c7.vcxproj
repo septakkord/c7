@@ -44,7 +44,7 @@
     <ClCompile Include="..\..\..\sources\math\decimal.cpp" />
     <ClCompile Include="..\..\..\sources\test\fail.cpp" />
     <ClCompile Include="..\..\..\sources\test\fail\fail_info.cpp" />
-    <ClCompile Include="..\..\..\sources\test\main.cpp" />
+    <ClCompile Include="..\..\..\sources\test\run.cpp" />
     <ClCompile Include="..\..\..\sources\test\suite.cpp" />
     <ClCompile Include="..\..\..\sources\type\cast.cpp" />
     <ClCompile Include="..\..\..\sources\type\object.cpp" />

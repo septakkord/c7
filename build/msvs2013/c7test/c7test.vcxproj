@@ -155,13 +155,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\sources\test\main.cpp" />
+    <ClCompile Include="..\..\..\sources\test\run\run_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\c7\c7.vcxproj">
       <Project>{e7026562-7e4a-4a9b-ad32-acb59cfe9722}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\sources\test\run.cpp" />
-    <ClCompile Include="..\..\..\sources\test\run\run_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
