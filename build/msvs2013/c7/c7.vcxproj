@@ -19,38 +19,38 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\c7\api" />
-    <None Include="..\..\..\c7\cloud\cache" />
-    <None Include="..\..\..\c7\data\query" />
-    <None Include="..\..\..\c7\math\decimal" />
-    <None Include="..\..\..\c7\test\check" />
-    <None Include="..\..\..\c7\test\fail" />
-    <None Include="..\..\..\c7\test\run" />
-    <None Include="..\..\..\c7\test\suite" />
-    <None Include="..\..\..\c7\type\cast" />
-    <None Include="..\..\..\c7\type\exception" />
-    <None Include="..\..\..\c7\type\lazycopy" />
-    <None Include="..\..\..\c7\type\object" />
-    <None Include="..\..\..\c7\type\traceback" />
-    <None Include="..\..\..\c7\unicode\sign" />
-    <None Include="..\..\..\c7\unicode\text" />
-    <None Include="..\..\..\internal\test\fail\fail_info" />
-    <None Include="..\..\..\internal\type\object\object_holder" />
-    <None Include="..\..\..\internal\type\object\scalar_holder" />
+    <None Include="..\..\..\include\c7\api" />
+    <None Include="..\..\..\include\c7\cloud\cache" />
+    <None Include="..\..\..\include\c7\data\query" />
+    <None Include="..\..\..\include\c7\math\decimal" />
+    <None Include="..\..\..\include\c7\test\check" />
+    <None Include="..\..\..\include\c7\test\fail" />
+    <None Include="..\..\..\include\c7\test\run" />
+    <None Include="..\..\..\include\c7\test\suite" />
+    <None Include="..\..\..\include\c7\type\cast" />
+    <None Include="..\..\..\include\c7\type\exception" />
+    <None Include="..\..\..\include\c7\type\lazycopy" />
+    <None Include="..\..\..\include\c7\type\object" />
+    <None Include="..\..\..\include\c7\type\traceback" />
+    <None Include="..\..\..\include\c7\unicode\sign" />
+    <None Include="..\..\..\include\c7\unicode\text" />
+    <None Include="..\..\..\sources\test\fail\fail_info" />
+    <None Include="..\..\..\sources\type\object\object_holder" />
+    <None Include="..\..\..\sources\type\object\scalar_holder" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\internal\cloud\cache.cpp" />
-    <ClCompile Include="..\..\..\internal\data\query.cpp" />
-    <ClCompile Include="..\..\..\internal\math\decimal.cpp" />
-    <ClCompile Include="..\..\..\internal\test\fail.cpp" />
-    <ClCompile Include="..\..\..\internal\test\fail\fail_info.cpp" />
-    <ClCompile Include="..\..\..\internal\test\run.cpp" />
-    <ClCompile Include="..\..\..\internal\test\suite.cpp" />
-    <ClCompile Include="..\..\..\internal\type\cast.cpp" />
-    <ClCompile Include="..\..\..\internal\type\object.cpp" />
-    <ClCompile Include="..\..\..\internal\type\object\object_holder.cpp" />
-    <ClCompile Include="..\..\..\internal\unicode\sign.cpp" />
-    <ClCompile Include="..\..\..\internal\unicode\text.cpp" />
+    <ClCompile Include="..\..\..\sources\cloud\cache.cpp" />
+    <ClCompile Include="..\..\..\sources\data\query.cpp" />
+    <ClCompile Include="..\..\..\sources\math\decimal.cpp" />
+    <ClCompile Include="..\..\..\sources\test\fail.cpp" />
+    <ClCompile Include="..\..\..\sources\test\fail\fail_info.cpp" />
+    <ClCompile Include="..\..\..\sources\test\main.cpp" />
+    <ClCompile Include="..\..\..\sources\test\suite.cpp" />
+    <ClCompile Include="..\..\..\sources\type\cast.cpp" />
+    <ClCompile Include="..\..\..\sources\type\object.cpp" />
+    <ClCompile Include="..\..\..\sources\type\object\object_holder.cpp" />
+    <ClCompile Include="..\..\..\sources\unicode\sign.cpp" />
+    <ClCompile Include="..\..\..\sources\unicode\text.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E7026562-7E4A-4A9B-AD32-ACB59CFE9722}</ProjectGuid>
@@ -127,7 +127,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;C7_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -142,7 +142,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;C7_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -159,7 +159,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;C7_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -178,7 +178,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;C7_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>

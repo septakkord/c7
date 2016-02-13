@@ -1,4 +1,4 @@
-#include <internal/test/fail/fail_info>
+#include "fail_info"
 #include <sstream>
 
 namespace c7
